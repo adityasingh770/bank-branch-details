@@ -3,7 +3,7 @@ from data import df
 
 app = Flask(__name__)
 
-@app.route('/get_details_by_ifsc/<string:ifsc>')
+@app.route('/get_details_by_ifsc/<string:req_ifsc>')
 def get_details_by_ifsc(req_ifsc):
     for i, ifsc in enumerate(df.ifsc, start=0):
         if ifsc == req_ifsc:
